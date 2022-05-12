@@ -29,8 +29,8 @@ public class BasePage {
     }
 
     public void waitVisibilityOfElement(long timeToWait, WebElement element) {
-        //WebDriverWait wait = new WebDriverWait(driver, timeToWait);
-        //wait.until(ExpectedConditions.visibilityOf(element));
+        WebDriverWait wait = new WebDriverWait(driver, timeToWait);
+        wait.until(ExpectedConditions.visibilityOf(element));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 

@@ -17,7 +17,7 @@ public class SearchResultsPage extends BasePage {
         super(driver);
     }
 
-    public void clickWishListOnFirstProduct() {
+    public void clickOnSearchResultsListFirstProduct() {
         searchResultsList.get(0).click();
     }
     public List<WebElement> getSearchResultsList() {

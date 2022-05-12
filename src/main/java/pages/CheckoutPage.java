@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class CheckoutPage extends BasePage {
 
-    @FindBy(xpath = "//button[contains(@class,'choose-payment-method__btn--regular-card')]")
+    @FindBy(xpath = "//input[contains(@class, 'total__submit')]")
     private WebElement paymentCartButton;
 
     @FindBy(xpath = "//*[@class='opc-billing-form']/*[@class='opc-billing-form__wrapper']")
