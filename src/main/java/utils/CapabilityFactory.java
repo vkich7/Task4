@@ -4,7 +4,7 @@ import org.openqa.selenium.Capabilities;
 
 public class CapabilityFactory {
 
-    private Capabilities capabilities;// свойства браузера
+    private Capabilities capabilities;
 
     public Capabilities getCapabilities(String browser) {
         if (browser.equals("firefox")) {

@@ -9,7 +9,7 @@ import java.net.URL;
 
 public class BaseTest {
 
-    protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();// ThreadLocal позволяет нам хранить данные, которые будут доступны только конкретным потоком. Каждый поток будет иметь свой собственный экземпляр ThreadLocal
+    protected static ThreadLocal<RemoteWebDriver> driver = new ThreadLocal<>();
     private CapabilityFactory capabilityFactory = new CapabilityFactory();
 
     private static final String ROZETKA_URL = "https://rozetka.com.ua/";

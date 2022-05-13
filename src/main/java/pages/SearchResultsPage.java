@@ -20,9 +20,7 @@ public class SearchResultsPage extends BasePage {
     public void clickOnSearchResultsListFirstProduct() {
         searchResultsList.get(0).click();
     }
-    public List<WebElement> getSearchResultsList() {
-        return searchResultsList;
-    }
+
     public void clickBuyButton() {
         buyButton.click();
     }

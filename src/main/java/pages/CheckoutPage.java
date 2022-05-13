@@ -9,13 +9,10 @@ public class CheckoutPage extends BasePage {
     @FindBy(xpath = "//input[contains(@class, 'total__submit')]")
     private WebElement paymentCartButton;
 
-    @FindBy(xpath = "//*[@class='opc-billing-form']/*[@class='opc-billing-form__wrapper']")
-    private WebElement billingForm;
-
-    @FindBy(xpath = "//div[@class='checkout-payment-form__wrapper']")
+    @FindBy(xpath = "//div[@class='checkout-form']")
     private WebElement paymentForm;
 
-    @FindBy(xpath = "//button[contains(@class,'checkout-order-summary__continue-btn')]")
+    @FindBy(xpath = "//input[contains(@class, 'submit')]")
     private WebElement completeOrderButton;
 
     public CheckoutPage(WebDriver driver) {
@@ -32,10 +29,6 @@ public class CheckoutPage extends BasePage {
 
     public WebElement getPaymentForm() {
         return paymentForm;
-    }
-
-    public boolean isBillingFormVisible() {
-        return billingForm.isDisplayed();
     }
 
     public boolean isPaymentFormVisible() {

@@ -22,6 +22,7 @@ public class ProductPage extends BasePage {
     public WebElement getAddToCartFirstButton() {
         return addToCartButtons.get(0);
     }
+
     public WebElement getAddToCartLastButton() {
         return addToCartButtons.get(addToCartButtons.size()-1);
     }

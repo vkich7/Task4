@@ -35,8 +35,4 @@ public class ShoppingCartPage extends BasePage {
         executor.executeScript("arguments[0].click();", checkoutButton);
     }
 
-    public WebElement getShoppingCartItem() {
-        return shoppingCartItem;
-    }
-
 }

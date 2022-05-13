@@ -35,7 +35,7 @@ public class SmokeTests extends BaseTest {
     }
 
     @Test
-    public void checkAddToCartOneItem() throws InterruptedException {
+    public void checkAddToCartOneItem() {
         getHomePage().waitForPageLoadComplete(DEFAULT_WAITING_TIME);
         getHomePage().isSearchFieldVisible();
         getHomePage().enterTextToSearchField("ball");
@@ -49,9 +49,8 @@ public class SmokeTests extends BaseTest {
     }
 
     @Test
-    public void checkAddToCart() {
+    public void checkAddToCartSomeItems() {
         getHomePage().waitForPageLoadComplete(DEFAULT_WAITING_TIME);
-        //getHomePage().waitForAjaxToComplete(DEFAULT_WAITING_TIME);
         getHomePage().isSearchFieldVisible();
         getHomePage().enterTextToSearchField("ball");
         getHomePage().waitForPageLoadComplete(DEFAULT_WAITING_TIME);
@@ -59,7 +58,6 @@ public class SmokeTests extends BaseTest {
         getSearchResultsPage().clickOnSearchResultsListFirstProduct();
         getSearchResultsPage().clickBuyButton();
         getProductPage().getAddToCartFirstButton().click();
-        //getHomePage().getCartButton().click();
         getProductPage().getAddToCartLastButton().click();
         getHomePage().getCartButton().click();
         getProductPage().isContinueShoppingButtonVisible();
@@ -68,7 +66,6 @@ public class SmokeTests extends BaseTest {
         getCheckoutPage().clickPaymentCartButton();
         getShoppingCartPage().waitVisibilityOfElement(DEFAULT_WAITING_TIME, getCheckoutPage().getPaymentForm());
         assertTrue(getCheckoutPage().isPaymentFormVisible());
-        assertTrue(getCheckoutPage().isBillingFormVisible());
         assertTrue(getCheckoutPage().isCompleteOrderButtonVisible());
     }
 }

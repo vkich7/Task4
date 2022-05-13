@@ -14,9 +14,6 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//ul[@class='header-actions']/li[contains(@class, 'cart')]")
     private WebElement cartIcon;
 
-    //@FindBy(xpath = "//ul[@class='header-actions']/li[contains(@class, 'language')]")
-    //private WebElement languageButton;
-
     @FindBy(xpath = "//li[contains(@class, 'item--language')]")
     private WebElement languageButton;
 
@@ -114,11 +111,6 @@ public class HomePage extends BasePage {
 
     public void clickCartButton() {
         cartIcon.click();
-    }
-
-    public void clickLanguageButton() {
-        //languageButton.click();
-        jsClick(languageButton);
     }
 
     public void enterTextToSearchField(final String searchText) {
