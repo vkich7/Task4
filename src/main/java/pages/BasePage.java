@@ -40,7 +40,7 @@ public class BasePage {
     }
 
     public void implicitWait(int seconds) {
-        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
     }
 
 }
